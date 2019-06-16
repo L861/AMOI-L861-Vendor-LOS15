@@ -1,0 +1,112 @@
+cc_prebuilt_library_shared {
+    name: "libnvram",
+    vendor: true,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libnvram.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libnvram.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
+
+
+cc_prebuilt_library_shared {
+    name: "libfgauge",
+    vendor: false,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libfgauge.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
+
+
+/*
+cc_prebuilt_library_shared {
+    name: "libcam2halsensor",
+    vendor: false,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libcam2halsensor.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libcam2halsensor.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
+
+cc_prebuilt_library_shared {
+    name: "libcam2client",
+    vendor: false,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libcam2client.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libcam2client.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }    
+*/
+
+cc_prebuilt_library_shared {
+    name: "libcameracustom",
+    vendor: false,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libcameracustom.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libcameracustom.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }   
+
+cc_prebuilt_library_shared {
+    name: "libdpframework",
+    vendor: true,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libdpframework.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libdpframework.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
+
+cc_prebuilt_library_shared {
+    name: "libcam_utils",
+    vendor: true,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libcam_utils.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libcam_utils.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
