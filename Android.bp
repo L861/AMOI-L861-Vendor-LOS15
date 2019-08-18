@@ -14,6 +14,23 @@ cc_prebuilt_library_shared {
              },
     }
 
+/*
+cc_prebuilt_library_shared {
+    name: "libmtkcamera_client",
+    vendor: true,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libmtkcamera_client.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libmtkcamera_client.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
+*/
 
 cc_prebuilt_library_shared {
     name: "libfgauge",
@@ -28,6 +45,21 @@ cc_prebuilt_library_shared {
              },
     }
 
+cc_prebuilt_library_shared {
+    name: "libcam.halsensor",
+    vendor: true,
+    target: {
+             android_arm: {
+                    srcs: ["proprietary/vendor/lib/libcam.halsensor.so"],
+             },
+             android_arm64: {
+                    srcs: ["proprietary/vendor/lib64/libcam.halsensor.so"],
+             },
+            },
+           strip: {
+                   none:true,
+             },
+    }
 
 /*
 cc_prebuilt_library_shared {
@@ -45,7 +77,8 @@ cc_prebuilt_library_shared {
                    none:true,
              },
     }
-
+*/
+/*
 cc_prebuilt_library_shared {
     name: "libcam2client",
     vendor: false,
@@ -63,6 +96,7 @@ cc_prebuilt_library_shared {
     }    
 */
 
+
 cc_prebuilt_library_shared {
     name: "libcameracustom",
     vendor: false,
@@ -78,6 +112,8 @@ cc_prebuilt_library_shared {
                    none:true,
              },
     }   
+
+
 
 cc_prebuilt_library_shared {
     name: "libdpframework",
@@ -95,6 +131,8 @@ cc_prebuilt_library_shared {
              },
     }
 
+
+/*
 cc_prebuilt_library_shared {
     name: "libcam_utils",
     vendor: true,
@@ -109,4 +147,4 @@ cc_prebuilt_library_shared {
            strip: {
                    none:true,
              },
-    }
+    } */

@@ -6,15 +6,7 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 
 
-#ifeq ($(USE_MTK_CAMERA_WRAPPER),true)
-#include $(CLEAR_VARS)
-#LOCAL_MODULE := libcam2client
-#LOCAL_SRC_FILES_64 := proprietary/lib64/libcam2client.so
-#LOCAL_SRC_FILES_32 := proprietary/lib/libcam2client.so
-#LOCAL_MULTILIB := both
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_SUFFIX := .so
-#include $(BUILD_PREBUILT)
+
 
 #ifeq ($(USE_MTK_CAMERA_WRAPPER),true)
 #include $(CLEAR_VARS)
@@ -26,21 +18,13 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 #LOCAL_MODULE_SUFFIX := .so
 #include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-#LOCAL_MODULE := libcameracustom
-#LOCAL_SRC_FILES_64 := proprietary/lib64/libcameracustom.so
-#LOCAL_SRC_FILES_32 := proprietary/lib/libcameracustom.so
-#LOCAL_MULTILIB := both
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_SUFFIX := .so
-#include $(BUILD_PREBUILT)
-#endif
+
 
 #ifeq ($(USE_MTK_CAMERA_WRAPPER),true)
 #include $(CLEAR_VARS)
 #LOCAL_MODULE := libcam_utils
-#LOCAL_SRC_FILES_64 := proprietary/lib64/libcam_utils.so
-#LOCAL_SRC_FILES_32 := proprietary/lib/libcam_utils.so
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam_utils.so
+#LOCAL_SRC_FILES_32 := proprietary/vendorlib/libcam_utils.so
 #LOCAL_MULTILIB := both
 #LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 #LOCAL_MODULE_SUFFIX := .so
@@ -48,6 +32,118 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 #endif
 
 
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libcameracustom
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcameracustom.so
+#LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libcameracustom.so
+#LOCAL_MULTILIB := both
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_SUFFIX := .so
+#include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libmtkcamera_client
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmtkcamera_client.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libmtkcamera_client.so
+#include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libJpgEncPipe
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libJpgEncPipe.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libJpgEncPipe.so
+#include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE = libfeatureio
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libfeatureio.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libfeatureio.so
+include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libcam.iopipe
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.iopipe.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.iopipe.so
+#include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE = libcam.utils
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.utils.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.utils.so
+include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libcam.camadapter
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.camadapter.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.camadapter.so
+#include $(BUILD_PREBUILT)
+
+
+include $(CLEAR_VARS)
+LOCAL_MODULE = libcam.camnode
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.camnode.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.camnode.so
+include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libcam.paramsmgr
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.paramsmgr.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.paramsmgr.so
+#include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE = libcam.client
+#LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+#LOCAL_MODULE_OWNER = mtk
+#LOCAL_MODULE_SUFFIX = .so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.client.so
+#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.client.so
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE = libcam.utils.sensorlistener
@@ -69,6 +165,22 @@ LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
+
+
+
+
+
+# MTK CAM
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmsdkservice
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmmsdkservice.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmmsdkservice.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+# End MTKCAM
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libged
@@ -125,18 +237,6 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := LetvRemoteControl_preinstall
-LOCAL_MODULE_OWNER := Letv
-LOCAL_SRC_FILES := proprietary/app/LetvRemoteControl_preinstall/LetvRemoteControl_preinstall.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := UEIQuicksetSDKLeTV
 LOCAL_MODULE_OWNER := Letv
 LOCAL_SRC_FILES := proprietary/app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk
@@ -182,3 +282,14 @@ LOCAL_MODULE_PATH       := $(TARGET_OUT)/app/Nfc/oat/arm64/
 include $(BUILD_PREBUILT)
 
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := CameraNext
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/priv-app/CameraNext/CameraNext.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
