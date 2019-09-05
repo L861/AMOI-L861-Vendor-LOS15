@@ -38,5 +38,12 @@
  <Param name="VIR_AUDIO_BLOUD_CUSTOMPARAMETER_V4" value="yes" /> 
  <Param name="VIR_MAGI_CONFERENCE_SUPPORT" value="no" /> 
  <Param name="MTK_AUDIO_HIERARCHICAL_PARAM_SUPPORT" value="" /> 
- <Param name="MTK_AUDIO_TUNING_TOOL_V2_PHASE" value="yes" /> 
+ <Param name="MTK_AUDIO_TUNING_TOOL_V2_PHASE" value="yes" />
+ <!-- added for L861 !-->
+ <Param name="MTK_AUDENH_SUPPORT" value="yes" />
+ <Param name="MTK_BESLOUDNESS_SUPPORT" value="yes" />
+ <Param name="MTK_BESSURROUND_SUPPORT" value="yes" />
+ <Param name="MTK_AUDIO_TUNING_TOOL_V2_PHASE" value="yes" />
+ <Param name="SetBesLoudnessStatus" value="1" />
+ <Param name="SetAudEnhStatus" value="1" />
 </AudioParamOptions>

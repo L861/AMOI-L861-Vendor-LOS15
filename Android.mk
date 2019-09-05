@@ -88,6 +88,17 @@ include $(BUILD_PREBUILT)
 #include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE = libaudiocustparam
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libaudiocustparam.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libaudiocustparam.so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE = libcam.utils
 LOCAL_MODULE_CLASS = SHARED_LIBRARIES
 LOCAL_MODULE_OWNER = mtk
@@ -286,6 +297,19 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := CameraNext
 LOCAL_MODULE_OWNER := Letv
 LOCAL_SRC_FILES := proprietary/priv-app/CameraNext/CameraNext.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Powertoggles
+LOCAL_MODULE_OWNER := Letv
+LOCAL_SRC_FILES := proprietary/priv-app/Toggles/Powertoggles.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
