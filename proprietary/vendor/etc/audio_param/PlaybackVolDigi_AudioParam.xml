@@ -15,7 +15,7 @@
     <Param path="Ring,HS5POLE_ANC" param_id="0"/>
     <Param path="Music,RCV" param_id="0"/>
     <Param path="Music,HS" param_id="0"/>
-    <Param path="Music,SPK" param_id="1"/>
+    <Param path="Music,SPK" param_id="3"/>
     <Param path="Music,HSSPK" param_id="0"/>
     <Param path="Music,HS5POLE" param_id="0"/>
     <Param path="Music,HS5POLE_ANC" param_id="0"/>
@@ -83,6 +83,9 @@
     </ParamUnit>
     <ParamUnit param_id="2">
       <Param name="digital_gain" value="-64,-42,-39,-36,-33,-30,-27,-24,-21,-18,-15,-12,-9,-6,-3,0"/>
+    </ParamUnit>
+    <ParamUnit param_id="3">
+      <Param name="digital_gain" value="-64,-42,-29,-26,-23,-20,-17,-14,-11,-8,-7,-6,-5,-4,-3,0"/>
     </ParamUnit>
   </ParamUnitPool>
 </AudioParam>

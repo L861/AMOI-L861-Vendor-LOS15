@@ -53,17 +53,40 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 #LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libmtkcamera_client.so
 #include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE = libgas
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libgas.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libgas.so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
 
 #include $(CLEAR_VARS)
-#LOCAL_MODULE = libJpgEncPipe
+#LOCAL_MODULE = libperfservicenative
 #LOCAL_MODULE_CLASS = SHARED_LIBRARIES
 #LOCAL_MODULE_OWNER = mtk
 #LOCAL_MODULE_SUFFIX = .so
 #LOCAL_PROPRIETARY_MODULE = true
 #LOCAL_MULTILIB := both
-#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libJpgEncPipe.so
-#LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libJpgEncPipe.so
+#LOCAL_SRC_FILES_64 := proprietary/lib64/libperfservicenative.so
+#LOCAL_SRC_FILES_32 = proprietary/lib/libperfservicenative.so
 #include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE = libgem
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_OWNER = mtk
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libgem.so
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libgem.so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE = libfeatureio
@@ -74,6 +97,7 @@ LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MULTILIB := both
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libfeatureio.so
 LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libfeatureio.so
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
 #include $(CLEAR_VARS)
@@ -96,6 +120,7 @@ LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MULTILIB := both
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libaudiocustparam.so
 LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libaudiocustparam.so
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -167,15 +192,15 @@ LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libcam.utils.sensorlistener.so
 LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libcam.utils.sensorlistener.so
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := libion_mtk
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libion_mtk.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libion_mtk.so
-LOCAL_PROPRIETARY_MODULE = true
-LOCAL_MULTILIB := both
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-include $(BUILD_PREBUILT)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libion_mtk
+#LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libion_mtk.so
+#LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libion_mtk.so
+#LOCAL_PROPRIETARY_MODULE = true
+#LOCAL_MULTILIB := both
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_SUFFIX := .so
+#include $(BUILD_PREBUILT)
 
 
 
