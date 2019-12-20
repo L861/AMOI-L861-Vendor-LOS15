@@ -5,6 +5,105 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 #$(info [Decker] copying DP Framework proprietary blobs)
 
 
+#### MTK FRAMEWORK DEPENDICS
+
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmdfx
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmdfx.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmdfx.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libnfc_mt6605_jni
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libnfc_mt6605_jni.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libnfc_mt6605_jni.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libfile_op
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libfile_op.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libfile_op.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmtknfc_dynamic_load_jni
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmtknfc_dynamic_load_jni.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmtknfc_dynamic_load_jni.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmtk_drvb
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmtk_drvb.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmtk_drvb.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmprofile
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmmprofile.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmmprofile.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpq_prot
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libpq_prot.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libpq_prot.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpqservice
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libpqservice.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libpqservice.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpq_cust
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libpq_cust.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libpq_cust.so
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+
+
+#### MTK FRAMEWORK end
 
 
 
@@ -54,16 +153,30 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 #include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE = libgas
-LOCAL_MODULE_CLASS = SHARED_LIBRARIES
-LOCAL_MODULE_OWNER = mtk
-LOCAL_MODULE_SUFFIX = .so
-LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MODULE := libgas
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_OWNER := mtk
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MULTILIB := both
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libgas.so
-LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libgas.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libgas.so
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
+
+
+include $(CLEAR_VARS)
+# usage to set SONAME patchelf --set-soname libmemtrack_GL.so libmemtrack_GL.so (install patchelf first)
+LOCAL_MODULE := libmemtrack_GL
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmemtrack_GL.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmemtrack_GL.so
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
 
 #include $(CLEAR_VARS)
 #LOCAL_MODULE = libperfservicenative
@@ -239,6 +352,16 @@ LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libmal
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmal.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmal.so
+LOCAL_PROPRIETARY_MODULE = true
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := mtk-ril
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/mtk-ril.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/mtk-ril.so
@@ -296,27 +419,7 @@ LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_MODULE_PATH       := $(TARGET_OUT)/app/
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_REQUIRED_MODULES := Nfc.odex
-LOCAL_REQUIRED_MODULES += Nfc.vdex
 include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE            := Nfc.odex
-LOCAL_MODULE_TAGS       := optional
-LOCAL_MODULE_CLASS      := APP
-LOCAL_CERTIFICATE 		:= platform
-LOCAL_SRC_FILES         := proprietary/app/Nfc/oat/arm64/Nfc.odex
-LOCAL_MODULE_PATH       := $(TARGET_OUT)/app/Nfc/oat/arm64/
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE            := Nfc.vdex
-LOCAL_MODULE_TAGS       := optional
-LOCAL_MODULE_CLASS      := APP
-LOCAL_SRC_FILES         := proprietary/app/Nfc/oat/arm64/Nfc.vdex
-LOCAL_MODULE_PATH       := $(TARGET_OUT)/app/Nfc/oat/arm64/
-include $(BUILD_PREBUILT)
-
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := CameraNext
